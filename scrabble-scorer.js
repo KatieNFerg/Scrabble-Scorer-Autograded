@@ -98,27 +98,27 @@ function initialPrompt() {
    return word;
 };
 
-let simpleScore = {
-   name: "Simple Score",
-   description: "each letter is 1 point.",
-   scoringFunction: simpleScorer,
+let simpleScoreObj = {
+  name: "Simple Score",
+  description: "each letter is 1 point.",
+   scorerFunction: simpleScorer,
 };
 
-let bonusVowel = {
+let bonusVowelObj = {
    name: "Vowel Bonus Scorer",
    description: "each vowel is 3 points, and consonants are 1 point.",
-   scoringFunction: vowelBonusScorer,
+   scorerFunction: vowelBonusScorer,
 };
 
-let scrabble = {
+let scrabbleObj = {
    name: "Scrabble",
    description: "the traditional scoring one",
-   scoringFunction: scrabbleScorer,
+   scorerFunction: scrabbleScorer,
 };
 
 
 
-const scoringAlgorithms = [simpleScore, bonusVowel, scrabble];
+const scoringAlgorithms = [simpleScoreObj, bonusVowelObj, scrabbleObj];
 
 function scorerPrompt() {
    let userInput = input.question(`Which scoring algorithm would you like to use?\n
